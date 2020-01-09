@@ -4,11 +4,15 @@ un cliente.
 Quando un cliente acquista un prodotto può scegliere che esso venga consegnato
 in uno dei punti di ritiro disponibili.
 
-Esistono dei punti di ritiro chiamati "hub" che possono accettare pacchi senza
-limiti di dimensione ne limiti di numero.
+Ci sono due tipi di punti di ritiro:
+ - gli hub
+ - i locker
 
-Esistono dei punti di ritiro chiamati "locker" che possono accettare un pacco
-solo se hanno a disposizione un box libero abbastanza grande da contenerlo.
+Gli "hub" che possono accettare pacchi senza limiti di dimensione e senza limiti
+di numero.
+
+I "locker" che possono accettare un pacco solo se hanno a disposizione un box
+libero abbastanza grande da contenerlo.
 
 Scrivere un servizio che, data la dimensione del pacco:
  * restituisca l'elenco dei punti di ritiro disponibili.
