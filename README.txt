@@ -28,5 +28,11 @@ Note:
 
 Come si sviluppa usando i test:
 
- - si lavora su un solo requisito alla volta
- - si lavora scrivendo prima il test, vedendolo fallire e poi facendolo passare
+ - si lavora in modo incrementale, un feature alla volta
+ - si segue questo ritmo
+    1. Quickly add a test.
+    2. Make it compile.
+    3. Watch it fail.
+    4. Make it run.
+    5. Make it right.
+
