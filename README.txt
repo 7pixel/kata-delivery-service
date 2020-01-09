@@ -28,6 +28,5 @@ Note:
 
 Come si sviluppa usando i test:
 
- - un requisito alla volta
- - in questo caso partiamo dal caso più facile, non è sempre il modo migliore
- - prima vediamo il test rosso e poi lo facciamo passare
+ - si lavora su un solo requisito alla volta
+ - si lavora scrivendo prima il test, vedendolo fallire e poi facendolo passare
