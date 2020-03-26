@@ -1,0 +1,26 @@
+@startuml
+
+class Locker  {
+    canAcceptPackage
+}
+
+class Hub {
+    canAcceptPackage
+}
+class DeliveryService
+
+DeliveryService -right-> "*" CollectionPoint
+CollectionPoint -right->  Container
+
+class CollectionPoint
+CollectionPoint : name
+CollectionPoint : container
+
+interface Container {
+    {abstract} canAcceptPackage
+}
+
+Container <|.. Locker
+Container <|.. Hub
+
+@enduml
