@@ -1,26 +1,21 @@
 @startuml
 
-class Locker  {
-    canAcceptPackage
-}
-
-class Hub {
-    canAcceptPackage
-}
 class DeliveryService
+DeliveryService -> "*" Point
+Point -> Container
 
-DeliveryService -right-> "*" CollectionPoint
-CollectionPoint -right->  Container
-
-class CollectionPoint
-CollectionPoint : name
-CollectionPoint : container
-
-interface Container {
-    {abstract} canAcceptPackage
+abstract class Point {
+    name
+    canAcceptPackage()
 }
-
-Container <|.. Locker
-Container <|.. Hub
+interface Container {
+    {abstract} canAcceptPackage()
+}
+class Locker implements Container {
+    canAcceptPackage()
+}
+class Hub implements Container {
+    canAcceptPackage()
+}
 
 @enduml
