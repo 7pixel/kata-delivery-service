@@ -1,2 +1,2 @@
 #!/bin/bash
-java -jar plantuml.jar
+java -jar plantuml.jar "$PWD" -gui "$@"
