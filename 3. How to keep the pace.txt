@@ -1,0 +1,4 @@
+Solution:
+1. Add one test at time
+2. Maintain a "TODO list" (a list of tests/features)
+3. Refactor after + Refactor BEFORE

@@ -26,13 +26,3 @@ Note:
  * I box nei locker sono cubici e possono contenere solo pacchi con lato più
    lungo minore o uguale al lato del box.
 
-Come si sviluppa usando i test:
-
- - si lavora in modo incrementale, un feature alla volta
- - si segue questo ritmo
-    1. Quickly add a test.
-    2. Make it compile.
-    3. Watch it fail.
-    4. Make it run.
-    5. Make it right.
-

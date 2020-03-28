@@ -1,0 +1,13 @@
+PSEUDO-TDD
+1. Think of a solution
+2. Imagine a bunch of classes and functions that you just know you’ll need to
+   implement (1)
+3. Write some tests that assert the existence of (2)
+4. Run all tests and fail
+5. Implement a bunch of stuff
+6. Run all tests and fail
+7. Debug
+8. Run the tests and succeed
+9. Write a TODO saying to go back and refactor some stuff later.
+
+From: https://cumulative-hypotheses.org/2011/08/30/tdd-as-if-you-meant-it/
