@@ -1,0 +1,36 @@
+Disclaimer:
+* Si andrà veloce per esigenze di tempo, interrompete se avete domande
+* Non siamo abituati a programmare in Java quindi perdonate eventuali errori
+* Programmeremo in TDD, breve spiegazione sotto
+
+Intro al TDD
+* Cos’è in breve? Prima scrivo il test poi il codice applicativo
+* Ciclo TDD
+* Definizione di refactor: migliorare il design del codice senza cambiarne il comportamento
+
+Passi del live coding:
+* noPickupPointAvailable
+* Far notare la spaziatura per definire bene Act-Arrange-Assert
+* oneAvailablePickupPoint -> torna sempre tutti i pickup points
+* Far notare come i nomi dei test aiutino a colpo d’occhio a capire cosa sta funzionando e cosa no
+* onePickupPointWithEnoughSpace -> 2 PickupPoint restituisce solo quello capiente
+** Introduciamo PickupPoint.hasSpaceFor quindi test unitari suoi
+* Far notare la differenza tra test unitari di PickupPoint e di integrazione su DeliveryService
+* ---FINE PRIMO REQUISITO (elenco pickup point disponibili) ---
+
+* bookPickupPointReturnsBookingCode -> torna stringa costante
+* bookPickupPoint -> Verifichiamo che la capacità disponibile dopo la prenotazione è scesa
+** Introduciamo PickupPoint.reserveSpace
+* ---FINE SECONDO REQUISITO (prenotazione pickup point) ---
+
+* Far notare che sviluppiamo sempre prima la feature minima per sviluppare il codice più semplice possibile. Nel mondo del lavoro i requisiti arrivano man mano e il codice deve evolvere. Quindi fino a questo punto andava bene che PickupPoint fosse “stupido”
+* Refactor: PickupPoint contiene la logica che genera il codice
+* Generazione dinamica del codice di ritiro 
+* pickPackageFromPickupPoint -> refactor interno in PickupPoint che contiene un HashMap
+** Introduciamo PickupPoint.freeSpace 
+* ---FINE TERZO REQUISITO (ritiro) ---
+
+* implementare eccezioni facendo vedere assertThrows
+* Refactor finale:
+** girare da ArrayList a HashMap la struttura dati di DeliveryService
+** disaccoppiare capacity da HashMap in PickupPoint
